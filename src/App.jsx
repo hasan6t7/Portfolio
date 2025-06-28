@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
+import Contact from "./Components/Contact/Contact";
+import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
+// import ScrollUpButton from "./Components/ScrollUpBtn/ScrollUpBtn";
+import MySkills from "./Components/MySkills/MySkills";
+import Projects from "./Components/Projects/Projects";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <Navbar />
+        <div className="md:px-9">
+          <Home />
+
+          <About />
+          <MySkills />
+          <Projects />
+          <Contact />
+        </div>
+        {/* <ScrollUpButton /> */}
+        <Footer />
+      </Router>
+      {/* <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<MySkills />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
