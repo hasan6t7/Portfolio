@@ -1,6 +1,6 @@
 import Container from "../../Hooks/Container";
 import SectionTitle from "../../Hooks/SectionTitle/SectionTitle";
-import me1 from "../../assets/me1.jpg";
+import me1 from "../../assets/me1.png";
 import me2 from "../../assets/me2.jpg";
 
 // Import Swiper React components
@@ -41,8 +41,8 @@ const About = () => {
                 Personal Info
               </h1>
               <p className="text-[#B0B0B0] mb-6 leading-relaxed">
-                Hello! I’m <span className="text-[#70FF00] font-semibold">Md. Hasanujjaman</span>,
-                a passionate <span className="text-[#70FF00] font-semibold"> MERN Stack Developer</span> from Rajshahi, Bangladesh.
+                Hello! I’m <span className="text-[#06b6d4] font-semibold">Md. Hasanujjaman</span>,
+                a passionate <span className="text-[#06b6d4] font-semibold"> MERN Stack Developer</span> from Rajshahi, Bangladesh.
                 My journey started with curiosity about how websites work, leading me to learn HTML, CSS, JavaScript, and React, later expanding into Node.js and MongoDB.
                 I enjoy building clean, interactive, and responsive websites that solve real-world problems and help businesses grow.
                 <br />
@@ -96,14 +96,14 @@ const About = () => {
                   <img
                     className="rounded-md h-[350px] w-full "
                     src={me1}
-                    alt="Md. Hasanujjaman Portfolio Photo 1"
+                    alt="Md. Hasanujjaman "
                   />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
                     className="rounded-md h-[350px] w-full "
                     src={me2}
-                    alt="Md. Hasanujjaman Portfolio Photo 2"
+                    alt="Md. Hasanujjaman"
                   />
                 </SwiperSlide>
               </Swiper>

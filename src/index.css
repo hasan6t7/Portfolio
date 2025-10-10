@@ -11,13 +11,7 @@
 }
 
 body {
-  background: linear-gradient(
-    130deg,
-    #000 0%,
-    #272727 44.03%,
-    #494949 99.99%,
-    #727272 100%
-  );
+  background: black;
   color: white;
   font-family: "Roboto", sans-serif;
 }
@@ -41,5 +35,5 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 100px;
-  background: #70ff00;
+  background: #06b6d4;
 }

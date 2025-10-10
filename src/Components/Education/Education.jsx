@@ -11,19 +11,19 @@ const Education = () => {
     <div id="education" className="mt-10 md:mt-0">
       <SectionTitle title={"Education"}></SectionTitle>
 
-      <VerticalTimeline lineColor={"#70FF00"}>
+      <VerticalTimeline lineColor={"#06b6d4"}>
       
 
-        <VerticalTimelineElement
+        {/* <VerticalTimelineElement
           className="vertical-timeline-element--work "
           contentStyle={{ backgroundColor: "transparent", color: "#828282" }}
-          contentArrowStyle={{ borderRight: "7px solid  #70FF00" }}
+          contentArrowStyle={{ borderRight: "7px solid  #06b6d4" }}
           date="2025 - Current"
-          dateClassName={"text-[#70FF00]"}
-          iconStyle={{ backgroundColor: "#161616", color: "#70FF00" }}
+          dateClassName={"text-[#06b6d4]"}
+          iconStyle={{ backgroundColor: "#161616", color: "#06b6d4" }}
           icon={<MdCastForEducation />}
         >
-          <h3 className="vertical-timeline-element-title text-[#70FF00]">
+          <h3 className="vertical-timeline-element-title text-[#06b6d4]">
             Self Learner
           </h3>
 
@@ -34,18 +34,18 @@ const Education = () => {
             growth through structured learning and real-world projects,
             solidifying my skills as a developer.
           </p>
-        </VerticalTimelineElement>
+        </VerticalTimelineElement> */}
 
         <VerticalTimelineElement
           className="vertical-timeline-element--work "
           contentStyle={{ backgroundColor: "transparent", color: "#828282" }}
-          contentArrowStyle={{ borderRight: "7px solid  #70FF00" }}
+          contentArrowStyle={{ borderRight: "7px solid  #06b6d4" }}
           date="2021 - 2025"
-          dateClassName={"text-[#70FF00]"}
-          iconStyle={{ backgroundColor: "#161616", color: "#70FF00" }}
+          dateClassName={"text-[#06b6d4]"}
+          iconStyle={{ backgroundColor: "#161616", color: "#06b6d4" }}
           icon={<MdCastForEducation />}
         >
-          <h3 className="vertical-timeline-element-title text-[#70FF00]">
+          <h3 className="vertical-timeline-element-title text-[#06b6d4]">
             Diploma in Engineering
           </h3>
 
@@ -60,13 +60,13 @@ const Education = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work "
           contentStyle={{ backgroundColor: "transparent", color: "#828282" }}
-          contentArrowStyle={{ borderRight: "7px solid  #70FF00" }}
+          contentArrowStyle={{ borderRight: "7px solid  #06b6d4" }}
           date="2021"
-          dateClassName={"text-[#70FF00]"}
-          iconStyle={{ backgroundColor: "#161616", color: "#70FF00" }}
+          dateClassName={"text-[#06b6d4]"}
+          iconStyle={{ backgroundColor: "#161616", color: "#06b6d4" }}
           icon={<MdCastForEducation />}
         >
-          <h3 className="vertical-timeline-element-title text-[#70FF00]">
+          <h3 className="vertical-timeline-element-title text-[#06b6d4]">
             SSC
           </h3>
 
@@ -77,10 +77,7 @@ const Education = () => {
           </p>
         </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          iconStyle={{ backgroundColor: "#161616", color: "#70FF00" }}
-          icon={<MdCastForEducation />}
-        />
+        
       </VerticalTimeline>
     </div>
   );

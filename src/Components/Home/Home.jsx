@@ -3,21 +3,26 @@ import { useEffect } from "react";
 import Container from "../../Hooks/Container";
 import animation from "../../assets/Animation - 1702242995403.json";
 import { useLottie } from "lottie-react";
-import resume from "/md-hasanujjamanResume.pdf";
+import resume from "/hasanujjaman's__resume.pdf";
 import { FaGithub, FaLinkedin } from "react-icons/fa"; // 🆕 social icons
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = resume;
-    link.download = "md-hasanujjamanResume.pdf";
+    link.download = "hasanujjaman's__resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   useEffect(() => {
-    const words = ["MERN Stack Developer", "Programmer"];
+    const words = [
+      "MERN Stack Developer",
+      "Frontend Developer",
+      "Full Stack Developer",
+    ];
     let part = "";
     let i = 0;
     let offset = 0;
@@ -74,7 +79,7 @@ const Home = () => {
           {/* left side */}
           <div className="space-y-4">
             <h4 className="text-2xl md:text-4xl font-bold">Hi I'm</h4>
-            <h2 className="text-[#70FF00] font-bold text-3xl md:text-6xl">
+            <h2 className="text-[#06b6d4] font-bold text-3xl md:text-6xl">
               Md. Hasanujjaman
             </h2>
             <div>
@@ -91,12 +96,23 @@ const Home = () => {
             </div>
 
             <div className="space-y-4">
-              <button
-                onClick={handleDownload}
-                className="btn font-bold bg-transparent text-[#70FF00] flex items-center gap-3 border-2 px-3 rounded-md"
-              >
-                Download Resume
-              </button>
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={handleDownload}
+                  className="btn font-bold bg-transparent text-[#06b6d4] flex items-center gap-3 border-2 px-3 rounded-md"
+                >
+                  Download Resume
+                </button>
+                <Link
+                  to={
+                    "https://drive.google.com/file/d/1pRs8Hrm2kNP9tcg8lCm7Jby43kyjV6-f/view?usp=sharing"
+                  }
+                  target="_blank"
+                  className="btn font-bold bg-transparent text-[#06b6d4] flex items-center gap-3 border-2 px-3 rounded-md"
+                >
+                  Preview Resume
+                </Link>
+              </div>
 
               {/* 🆕 Social icons */}
               <div className="flex items-center gap-5 text-2xl px-2 mt-2">
@@ -104,7 +120,7 @@ const Home = () => {
                   href="https://github.com/hasan6t7"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#F2F2F2] hover:text-[#70FF00] transition-colors duration-300"
+                  className="text-[#F2F2F2] hover:text-[#06b6d4] transition-colors duration-300"
                 >
                   <FaGithub />
                 </a>
@@ -112,7 +128,7 @@ const Home = () => {
                   href="https://www.linkedin.com/in/hasanujjaman-hasan"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#F2F2F2] hover:text-[#70FF00] transition-colors duration-300"
+                  className="text-[#F2F2F2] hover:text-[#06b6d4] transition-colors duration-300"
                 >
                   <FaLinkedin />
                 </a>

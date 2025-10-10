@@ -16,7 +16,6 @@ function App() {
         <Navbar />
         <div className="md:px-9">
           <Home />
-
           <About />
           <MySkills />
           <Projects />
@@ -25,12 +24,7 @@ function App() {
         {/* <ScrollUpButton /> */}
         <Footer />
       </Router>
-      {/* <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<MySkills />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes> */}
+     
     </>
   );
 }

@@ -87,7 +87,7 @@ const ContactForm = () => {
 
               <button
                 type="submit"
-                className="btn hover:bg-transparent w-full mt-4 font-bold bg-transparent text-[#70FF00] flex items-center gap-3 border-2 border-gray-400  px-3 rounded-md"
+                className="btn hover:bg-transparent w-full mt-4 font-bold bg-transparent text-[#06b6d4] flex items-center gap-3 border-2 border-gray-400  px-3 rounded-md"
               >
                 {state?.submitting && (
                   <span className="loading loading-spinner loading-md pl-2"></span>

@@ -1,6 +1,5 @@
 // Navbar.js
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import logo from "../../assets/Group.png";
 import email from "../../assets/email-fast-outline 2.png";
 
 const Navbar = () => {
@@ -10,23 +9,23 @@ const Navbar = () => {
 
   const navbarLink = (
     <>
-      <li className="hover:text-[#70FF00]">
+      <li className="hover:text-[#06b6d4]">
         <ScrollLink to="home" smooth={true} duration={500}>
           Home
         </ScrollLink>
       </li>
 
-      <li className="hover:text-[#70FF00]">
+      <li className="hover:text-[#06b6d4]">
         <ScrollLink to="skills" smooth={true} duration={500}>
           Skills
         </ScrollLink>
       </li>
-      <li className="hover:text-[#70FF00]">
+      <li className="hover:text-[#06b6d4]">
         <ScrollLink to="projects" smooth={true} duration={500}>
           Projects
         </ScrollLink>
       </li>
-      <li className="hover:text-[#70FF00]">
+      <li className="hover:text-[#06b6d4]">
         <ScrollLink to="about" smooth={true} duration={500}>
           About
         </ScrollLink>
@@ -34,7 +33,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="pt-3 sticky top-0 z-50 bg-base-300">
+    <div className="pt-3 sticky top-0 z-50 bg-[#111111]">
       <div className="navbar mx-auto max-w-7xl  text-[#F2F2F2]">
         <div className="md:navbar-start">
           <div className="dropdown">
@@ -66,7 +65,7 @@ const Navbar = () => {
               {navbarLink}
             </ul>
           </div>
-          <img className="w-[40px] md:w-[60px]" src={logo} alt="logo" />
+          {/* <img className="w-[40px] md:w-[60px]" src={logo} alt="logo" /> */}
           <h4 className="ml-5 text-lg md:text-3xl font-bold uppercase">
             <span className="text-[#828282] ">Md.</span> Hasanujjaman
           </h4>

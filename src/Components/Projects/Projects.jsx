@@ -1,419 +1,165 @@
 /* eslint-disable react/no-unescaped-entities */
 import Container from "../../Hooks/Container";
 import SectionTitle from "../../Hooks/SectionTitle/SectionTitle";
-import project1 from "../../assets/phudu.png";
-import project2 from "../../assets/auction.png";
-import project3 from "../../assets/roomie-fi.png";
 import { NavLink } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "./Projects.css";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaJs,
+  FaGitAlt,
+} from "react-icons/fa";
+import {
+  SiFirebase,
+  SiExpress,
+  SiMongodb,
+  SiTailwindcss,
+  SiAxios,
+} from "react-icons/si";
+import { motion } from "framer-motion";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import project1 from "../../assets/work-sync.png";
+import project2 from "../../assets/e-services.png";
+import project3 from "../../assets/roomie-fi.png";
 
-import { Pagination } from "swiper/modules";
+const projectsData = [
+  {
+    title: "Work Sync",
+    description:
+      "Work Sync helps businesses manage employees efficiently — from payroll and attendance to performance tracking, all in one intuitive dashboard.",
+    image: project1,
+    tech: [
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "firebase",
+      "nodejs",
+      "express",
+      "mongodb",
+      "tailwind",
+    ],
+    liveLink: "https://work-syncc.web.app/",
+    githubLink: "https://github.com/hasan6t7/work-sync-client",
+  },
+  {
+    title: "E-Services",
+    description:
+      "E-Services is a digital service platform where users can explore and manage various online services. Create an account to add, edit, or manage products with real-time alerts and a smooth mobile-friendly experience.",
+    image: project2,
+
+    tech: [
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "firebase",
+      "nodejs",
+      "express",
+      "mongodb",
+      "axios",
+      "tailwind",
+    ],
+    liveLink: "https://e-services-02.web.app/",
+    githubLink: "https://github.com/hasan6t7/e-services",
+  },
+  {
+    title: "Roomie-Fi",
+    description:
+      "Roomie-Fi helps you manage roommate finding and bookings effortlessly. Create an account, explore available services, track your schedules, and enjoy instant notifications for successful actions.",
+    image: project3,
+    tech: [
+      "html",
+      "css",
+      "javascript",
+      "react",
+      "firebase",
+      "nodejs",
+      "express",
+      "mongodb",
+      "axios",
+      "tailwind",
+    ],
+    liveLink: "https://roomie-fi.web.app/",
+    githubLink: "https://github.com/hasan6t7/roomie-fi-client",
+  },
+];
+
+const techIcons = {
+  html: <FaHtml5 className="text-orange-500" />,
+  css: <FaCss3Alt className="text-blue-500" />,
+  javascript: <FaJs className="text-yellow-400" />,
+  react: <FaReact className="text-sky-400" />,
+  firebase: <SiFirebase className="text-yellow-300" />,
+  nodejs: <FaNodeJs className="text-green-500" />,
+  express: <SiExpress className="text-gray-300" />,
+  mongodb: <SiMongodb className="text-green-600" />,
+  tailwind: <SiTailwindcss className="text-sky-500" />,
+  axios: <SiAxios className="text-blue-400" />,
+};
 
 const Projects = () => {
   return (
-    <div id="projects">
-      <SectionTitle title={"Projects"}></SectionTitle>
+    <div id="projects" className="py-16 ">
+      <SectionTitle title="Projects" />
       <Container>
-        <Swiper
-          pagination={{
-            dynamicBullets: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-5">
-            {/* Project 1 */}
-            <SwiperSlide>
-              <div className="card  shadow-md hover:shadow-xl text-center md:text-left cursor-grab">
-                <div className="flex flex-col md:flex-row">
-                  <figure>
-                    <img src={project1} alt="Project" />
-                  </figure>
-                  <div className="card-body">
-                    <h2 className=" font-bold text-2xl  text-[#70FF00]">
-                      Phudu
-                    </h2>
-                    <p className="mt-3 text-[#828282]">
-                      Phudu is a Doctor Booking Website . You can booked an
-                      appointment if Doctor is available and you can manage your
-                      appointment. You can see Every Doctor's Details here and then if you want to book an appointment , you can . 
-                    </p>
-
-                    <div className="flex gap-1 justify-center md:justify-start my-2">
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
-                          alt="HTML"
-                          title="HTML"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"
-                          alt="CSS"
-                          title="CSS"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png"
-                          alt="Firebase"
-                          title="Firebase"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"
-                          alt="JavaScript"
-                          title="JavaScript"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
-                          alt="Node.js"
-                          title="Node.js"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png"
-                          alt="Express"
-                          title="Express"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png"
-                          alt="mongoDB"
-                          title="mongoDB"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/189716630-fe6c084c-6c66-43af-aa49-64c8aea4a5c2.png"
-                          alt="Material UI"
-                          title="Material UI"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png"
-                          alt="Tailwind CSS"
-                          title="Tailwind CSS"
-                        />
-                      </code>
-                    </div>
-
-                    <div className="card-actions justify-center md:justify-start mt-5">
-                      <NavLink
-                        to={"https://regal-bubblegum-a6baed.netlify.app/"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="btn btn-sm  btn-outline text-[#70FF00] border-white">
-                          Live Link
-                        </button>
-                      </NavLink>
-
-                      <NavLink
-                        to={
-                          "https://github.com/hasan6t7/Phudu-Doctor"
-                        }
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="btn btn-sm  btn-outline text-[#70FF00] border-white">
-                          Client Code
-                        </button>
-                      </NavLink>
-
-                     
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectsData.map((project, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.2 }}
+              className="bg-[#1e1e1e] rounded-xl shadow-lg hover:shadow-[#06b6d4]/50 transition-shadow duration-300 flex flex-col"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="rounded-t-xl  w-full h-52 md:h-60"
+              />
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="text-xl md:text-2xl font-bold text-[#06b6d4] mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-[#b3b3b3] text-sm md:text-base mb-4 flex-1">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-3 mb-4 text-xl">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="hover:scale-110 transition-transform duration-200"
+                    >
+                      {techIcons[tech]}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3 mt-auto">
+                  <NavLink
+                    to={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="btn btn-sm btn-outline text-[#06b6d4] border-white">
+                      Live Link
+                    </button>
+                  </NavLink>
+                  <NavLink
+                    to={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="btn btn-sm btn-outline text-[#06b6d4] border-white">
+                      Client Code
+                    </button>
+                  </NavLink>
                 </div>
               </div>
-            </SwiperSlide>
-
-            {/* Project 2 */}
-            <SwiperSlide>
-              {" "}
-              <div className="card shadow-md hover:shadow-xl text-center md:text-left cursor-grab">
-                <div className="flex flex-col md:flex-row">
-                  <figure>
-                    <img src={project2} alt="Project" />
-                  </figure>
-                  <div className="card-body">
-                    <h2 className=" font-bold text-2xl text-[#70FF00]">
-                      Drive Master Pro
-                    </h2>
-                    <p className="mt-3 text-[#828282]">
-                      Explore diverse cars on our website. Create an account for
-                      'Add Product' and 'My Cart.' The mobile-friendly design
-                      ensures easy access. Get sweet alerts for successful
-                      actions like registration, login, and adding to your cart.
-                    </p>
-
-                    <div className="flex gap-1 justify-center md:justify-start my-2">
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
-                          alt="HTML"
-                          title="HTML"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"
-                          alt="CSS"
-                          title="CSS"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png"
-                          alt="Firebase"
-                          title="Firebase"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"
-                          alt="JavaScript"
-                          title="JavaScript"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="20"
-                          src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
-                          alt="React"
-                          title="React"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
-                          alt="Node.js"
-                          title="Node.js"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png"
-                          alt="Express"
-                          title="Express"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png"
-                          alt="mongoDB"
-                          title="mongoDB"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://www.vectorlogo.zone/logos/axios/axios-ar21.svg"
-                          alt="HTML"
-                          title="HTML"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png"
-                          alt="Tailwind CSS"
-                          title="Tailwind CSS"
-                        />
-                      </code>
-                    </div>
-
-                    <div className="card-actions justify-center md:justify-start mt-5">
-                      <NavLink
-                        to={"https://calm-bombolone-252c32.netlify.app/"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="btn btn-sm  btn-outline text-[#70FF00] border-white">
-                          Live link
-                        </button>
-                      </NavLink>
-
-                      <NavLink
-                        to={
-                          "https://github.com/hasan6t7/Auction-gellary"
-                        }
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="btn btn-sm  btn-outline text-[#70FF00] border-white">
-                          Client Code
-                        </button>
-                      </NavLink>
-
-                     
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Project 3 */}
-            <SwiperSlide>
-              <div className="card  shadow-md hover:shadow-xl text-center md:text-left cursor-grab">
-                <div className="flex flex-col md:flex-row">
-                  <figure>
-                    <img src={project3} alt="Project" />
-                  </figure>
-                  <div className="card-body">
-                    <h2 className=" font-bold text-2xl  text-[#70FF00]">
-                      Adventure Hub
-                    </h2>
-                    <p className="mt-3 text-[#828282]">
-                      Discover tours on our mobile-friendly site. Create an
-                      account for 'Add Service,' 'My Booking,' and 'My
-                      Schedules.' Receive sweet alerts for successful actions
-                      like registration, login, and service or booking
-                      additions.
-                    </p>
-
-                    <div className="flex gap-1 justify-center md:justify-start my-2">
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png"
-                          alt="HTML"
-                          title="HTML"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png"
-                          alt="CSS"
-                          title="CSS"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/189716855-2c69ca7a-5149-4647-936d-780610911353.png"
-                          alt="Firebase"
-                          title="Firebase"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="20"
-                          src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png"
-                          alt="React"
-                          title="React"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png"
-                          alt="JavaScript"
-                          title="JavaScript"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png"
-                          alt="Node.js"
-                          title="Node.js"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png"
-                          alt="Express"
-                          title="Express"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png"
-                          alt="mongoDB"
-                          title="mongoDB"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://www.vectorlogo.zone/logos/axios/axios-ar21.svg"
-                          alt="HTML"
-                          title="HTML"
-                        />
-                      </code>
-                      <code>
-                        <img
-                          width="25"
-                          src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png"
-                          alt="Tailwind CSS"
-                          title="Tailwind CSS"
-                        />
-                      </code>
-                    </div>
-
-                    <div className="card-actions justify-center md:justify-start mt-5">
-                      <NavLink
-                        to={"https://roomie-fi.web.app/"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="btn btn-sm  btn-outline text-[#70FF00] border-white">
-                          Live link
-                        </button>
-                      </NavLink>
-
-                      <NavLink
-                        to={
-                          "https://github.com/hasan6t7/roomie-fi-client"
-                        }
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="btn btn-sm  btn-outline text-[#70FF00] border-white">
-                          Client Code
-                        </button>
-                      </NavLink>
-
-                     
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </div>
-        </Swiper>
+            </motion.div>
+          ))}
+        </div>
       </Container>
     </div>
   );
