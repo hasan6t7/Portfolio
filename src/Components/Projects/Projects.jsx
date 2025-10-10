@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+
 import Container from "../../Hooks/Container";
 import SectionTitle from "../../Hooks/SectionTitle/SectionTitle";
 import { NavLink } from "react-router-dom";
@@ -19,16 +19,14 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
-import project1 from "../../assets/work-sync.png";
-import project2 from "../../assets/e-services.png";
-import project3 from "../../assets/roomie-fi.png";
+
 
 const projectsData = [
   {
     title: "Work Sync",
     description:
       "Work Sync helps businesses manage employees efficiently — from payroll and attendance to performance tracking, all in one intuitive dashboard.",
-    image: project1,
+    image: "https://i.ibb.co.com/spnpV7YK/work-sync.png",
     tech: [
       "html",
       "css",
@@ -47,7 +45,7 @@ const projectsData = [
     title: "E-Services",
     description:
       "E-Services is a digital service platform where users can explore and manage various online services. Create an account to add, edit, or manage products with real-time alerts and a smooth mobile-friendly experience.",
-    image: project2,
+    image: "https://i.ibb.co.com/Zp8jtsjS/e-services.png",
 
     tech: [
       "html",
@@ -68,7 +66,7 @@ const projectsData = [
     title: "Roomie-Fi",
     description:
       "Roomie-Fi helps you manage roommate finding and bookings effortlessly. Create an account, explore available services, track your schedules, and enjoy instant notifications for successful actions.",
-    image: project3,
+    image: "https://i.ibb.co.com/F4mfjBSV/roomie-fi.png",
     tech: [
       "html",
       "css",
@@ -115,7 +113,7 @@ const Projects = () => {
               className="bg-[#1e1e1e] rounded-xl shadow-lg hover:shadow-[#06b6d4]/50 transition-shadow duration-300 flex flex-col"
             >
               <img
-                src={project.image}
+                src={project?.image}
                 alt={project.title}
                 className="rounded-t-xl  w-full h-52 md:h-60"
               />

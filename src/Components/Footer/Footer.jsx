@@ -1,4 +1,9 @@
-import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import Container from "../../Hooks/Container";
 
@@ -8,41 +13,29 @@ const Footer = () => {
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm md:text-base">
           {/* About / Logo */}
-          <div className="flex flex-col items-start">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#06b6d4] mb-2">
-              Md. Hasanujjaman
-            </h2>
-            <p className="mb-3">Full Stack Web Developer</p>
-            <p className="flex items-center gap-2 mb-1 hover:text-[#06b6d4] transition-colors duration-200">
-              <FaEnvelope className="text-[#06b6d4]" /> hasan.hasanujjaman@gmail.com
-            </p>
-            <p className="flex items-center gap-2 hover:text-[#06b6d4] transition-colors duration-200">
-              <FaMapMarkerAlt className="text-[#06b6d4]" /> Chapainawabganj, Rajshahi
-            </p>
-          </div>
 
           {/* Projects */}
-          <div>
+          <div className="">
             <h3 className="text-[#06b6d4] font-semibold mb-3">Projects</h3>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://regal-bubblegum-a6baed.netlify.app/"
+                  href="https://work-syncc.web.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#06b6d4] transition-colors duration-200"
                 >
-                  PhuDu
+                  Work-Sync
                 </a>
               </li>
               <li>
                 <a
-                  href="https://calm-bombolone-252c32.netlify.app/"
+                  href="https://e-services-02.web.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#06b6d4] transition-colors duration-200"
                 >
-                  Auction Gellary
+                  E-Services
                 </a>
               </li>
               <li>
@@ -59,7 +52,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media */}
-          <div>
+          <div className="">
             <h3 className="text-[#06b6d4] font-semibold mb-3">Social Media</h3>
             <ul className="flex flex-col gap-2">
               <li>
@@ -94,7 +87,7 @@ const Footer = () => {
           </div>
 
           {/* Legal */}
-          <div>
+          <div className="">
             <h3 className="text-[#06b6d4] font-semibold mb-3">Legal</h3>
             <ul className="space-y-2">
               <li className="hover:text-[#06b6d4] cursor-pointer transition-colors duration-200">
@@ -107,6 +100,21 @@ const Footer = () => {
                 Cookie Policy
               </li>
             </ul>
+          </div>
+          <div className="flex flex-col items-start ">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#06b6d4] mb-2">
+              Md. Hasanujjaman
+            </h2>
+            <p className="mb-3">Full Stack Web Developer</p>
+
+            <p className="flex items-center gap-2 hover:text-[#06b6d4] transition-colors duration-200">
+              <FaMapMarkerAlt className="text-[#06b6d4]" /> Chapainawabganj,
+              Rajshahi
+            </p>
+            <p className="flex items-center gap-2 mb-1 hover:text-[#06b6d4] transition-colors duration-200">
+              <FaEnvelope className="text-[#06b6d4]" />{" "}
+              hasan.hasanujjaman4368@gmail.com
+            </p>
           </div>
         </div>
       </Container>

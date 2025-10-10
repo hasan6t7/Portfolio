@@ -1,7 +1,6 @@
 import Container from "../../Hooks/Container";
 import SectionTitle from "../../Hooks/SectionTitle/SectionTitle";
-import me1 from "../../assets/me1.png";
-import me2 from "../../assets/me2.jpg";
+
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -95,14 +94,14 @@ const About = () => {
                 <SwiperSlide>
                   <img
                     className="rounded-md h-[350px] w-full "
-                    src={me1}
+                    src={"https://i.ibb.co.com/B5bGJJNp/me1.png"}
                     alt="Md. Hasanujjaman "
                   />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
                     className="rounded-md h-[350px] w-full "
-                    src={me2}
+                    src={"https://i.ibb.co.com/Df0bdy2L/me2.jpg"}
                     alt="Md. Hasanujjaman"
                   />
                 </SwiperSlide>
