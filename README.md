@@ -1,4 +1,4 @@
-<p className={"text-center"}>Md.Hasanujjaman's Portfolio</p>
+<p text-align={center}>Md.Hasanujjaman's Portfolio</p>
 ---
 
 ---
