@@ -40,11 +40,11 @@ const Navbar = () => {
               onClick={() => scroll.scrollToTop()}
               className="group cursor-pointer flex items-center gap-2"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center font-black text-white shadow-lg group-hover:rotate-6 transition-transform">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl hidden md:flex items-center justify-center font-black text-white shadow-lg group-hover:rotate-6 transition-transform">
                 H
               </div>
               <h4 className="text-xl md:text-2xl font-bold tracking-tight">
-                HASAN<span className="text-cyan-500">.</span>
+               <span className="text-cyan-500 font-bold">{` <`}</span> HASAN<span className="text-cyan-500 font-bold">{` />`}</span>
               </h4>
             </div>
           </div>

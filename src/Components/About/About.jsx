@@ -28,12 +28,12 @@ const About = () => {
   const { View } = useLottie(options);
 
   return (
-    <div id="about" className="min-h-screen">
+    <div id="about" className="min-h-screen mt-20 md:mt-0">
       <SectionTitle title={"About Me"} />
       <div className="mt-10">
         <Container>
           <div
-            className="flex flex-col-reverse items-center md:flex-row gap-14 md:gap-5"
+            className="flex flex-col-reverse items-center md:flex-row gap-5 md:gap-5"
             data-aos="fade-up"
           >
             {/* Left side: Personal Info */}
