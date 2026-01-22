@@ -12,8 +12,6 @@ const Education = () => {
       <SectionTitle title={"Education"}></SectionTitle>
 
       <VerticalTimeline lineColor={"#06b6d4"}>
-      
-
         {/* <VerticalTimelineElement
           className="vertical-timeline-element--work "
           contentStyle={{ backgroundColor: "transparent", color: "#828282" }}
@@ -49,11 +47,19 @@ const Education = () => {
             Diploma in Engineering
           </h3>
 
-          <p>
-            Pursuing a Diploma in Engineering Dept. of Computer Science &
-            Technology, focusing on practical skills in programming, web
-            development, and software engineering to build a strong foundation
-            for my career as a developer.
+          <p className="text-[#B0B0B0] mb-6 leading-relaxed">
+            Completed a{" "}
+            <span className="text-[#06b6d4] font-semibold">
+              Diploma in Engineering
+            </span>{" "}
+            with a CGPA of{" "}
+            <span className="text-[#06b6d4] font-semibold">3.75</span> in the{" "}
+            <span className="text-[#06b6d4] font-semibold">
+              Department of Computer Science & Technology
+            </span>
+            . Focused on practical skills in programming, web development, and
+            software engineering to build a strong foundation for my career as a
+            developer.
           </p>
         </VerticalTimelineElement>
 
@@ -76,8 +82,6 @@ const Education = () => {
             that sparked my interest in problem-solving and technology.
           </p>
         </VerticalTimelineElement>
-
-        
       </VerticalTimeline>
     </div>
   );
