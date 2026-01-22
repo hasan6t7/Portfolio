@@ -1,23 +1,18 @@
+import { useEffect } from "react";
 import Container from "../../Hooks/Container";
 import SectionTitle from "../../Hooks/SectionTitle/SectionTitle";
-
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cards";
-
-import { EffectCards } from "swiper/modules";
 import Education from "../Education/Education";
 
-// Import AOS for scroll animation
-import { useEffect } from "react";
+// Lottie
+import { useLottie } from "lottie-react";
+import lottieAnimation from "../../assets/Animation - 1702242995403.json";
+
+// AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const About = () => {
+  // Initialize AOS
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -25,9 +20,16 @@ const About = () => {
     });
   }, []);
 
+  // Lottie options
+  const options = {
+    animationData: lottieAnimation,
+    loop: true,
+  };
+  const { View } = useLottie(options);
+
   return (
     <div id="about" className="min-h-screen">
-      <SectionTitle title={"About Me"}></SectionTitle>
+      <SectionTitle title={"About Me"} />
       <div className="mt-10">
         <Container>
           <div
@@ -40,20 +42,32 @@ const About = () => {
                 Personal Info
               </h1>
               <p className="text-[#B0B0B0] mb-6 leading-relaxed">
-                Hello! I’m <span className="text-[#06b6d4] font-semibold">Md. Hasanujjaman</span>,
-                a passionate <span className="text-[#06b6d4] font-semibold"> MERN Stack Developer</span> from Rajshahi, Bangladesh.
-                My journey started with curiosity about how websites work, leading me to learn HTML, CSS, JavaScript, and React, later expanding into Node.js and MongoDB.
-                I enjoy building clean, interactive, and responsive websites that solve real-world problems and help businesses grow.
+                Hello! I’m{" "}
+                <span className="text-[#06b6d4] font-semibold">
+                  Md. Hasanujjaman
+                </span>
+                , a passionate{" "}
+                <span className="text-[#06b6d4] font-semibold">
+                  MERN Stack Developer
+                </span>{" "}
+                from Rajshahi, Bangladesh. My journey started with curiosity
+                about how websites work, leading me to learn HTML, CSS,
+                JavaScript, and React, later expanding into Node.js and MongoDB.
+                I enjoy building clean, interactive, and responsive websites
+                that solve real-world problems and help businesses grow.
                 <br />
                 <br />
-                Outside of coding, I love playing badminton, exploring photography, sketching, and listening to instrumental music while coding.
-                I believe in continuous learning and strive to improve every day while building projects that positively impact people.
+                Outside of coding, I love playing badminton, exploring
+                photography, sketching, and listening to instrumental music
+                while coding. I believe in continuous learning and strive to
+                improve every day while building projects that positively impact
+                people.
               </p>
+
               <div className="lg:grid lg:grid-cols-6">
                 <div className="lg:space-y-4 font-bold lg:col-span-2 mr-5 text-[#828282]">
                   <h3>
-                    Name:{" "}
-                    <span className="text-[#F2F2F2]">Md. Hasanujjaman</span>
+                    Name: <span className="text-[#F2F2F2]">Md. Hasanujjaman</span>
                   </h3>
                   <h3>
                     Age: <span className="text-[#F2F2F2]">22</span>
@@ -64,8 +78,7 @@ const About = () => {
                 </div>
                 <div className="lg:space-y-4 font-bold lg:col-span-4 text-[#828282]">
                   <h3>
-                    Phone:{" "}
-                    <span className="text-[#F2F2F2]">+880 1785 4343 67</span>
+                    Phone: <span className="text-[#F2F2F2]">+880 1785 4343 67</span>
                   </h3>
                   <h3>
                     Email:{" "}
@@ -83,36 +96,13 @@ const About = () => {
               </div>
             </div>
 
-            {/* Right side: Swiper */}
-            <div className="w-3/4 md:w-1/3">
-              <Swiper
-                effect={"cards"}
-                grabCursor={true}
-                modules={[EffectCards]}
-                className="mySwiper"
-              >
-                <SwiperSlide>
-                  <img
-                    className="rounded-md h-[350px] w-full "
-                    src={"https://i.ibb.co.com/B5bGJJNp/me1.png"}
-                    alt="Md. Hasanujjaman "
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    className="rounded-md h-[350px] w-full "
-                    src={"https://i.ibb.co.com/Df0bdy2L/me2.jpg"}
-                    alt="Md. Hasanujjaman"
-                  />
-                </SwiperSlide>
-              </Swiper>
+            {/* Right side: Lottie Animation */}
+            <div className="w-3/4 md:w-2/5 flex justify-center" data-aos="fade-up">
+              <div className="h-[350px] w-full">{View}</div>
             </div>
           </div>
 
-          {/* Education */}
-          <div data-aos="fade-up" className="mt-12">
-            <Education></Education>
-          </div>
+          
         </Container>
       </div>
     </div>
