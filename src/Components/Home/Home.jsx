@@ -79,7 +79,7 @@ const Home = () => {
           {/* left side */}
           <div className="space-y-4">
             <h4 className="text-2xl md:text-4xl font-bold">Hi I'm</h4>
-            <h2 className="text-[#06b6d4] font-bold text-3xl md:text-6xl">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] via-[#ffffff] to-[#06b6d4] bg-[length:200%_auto] animate-gradient-move font-bold text-3xl md:text-6xl">
               Md. Hasanujjaman
             </h2>
             <div>
@@ -137,7 +137,61 @@ const Home = () => {
           </div>
 
           {/* right side */}
-          <div>{View}</div>
+          {/* right side */}
+          <div className="relative flex items-center justify-center w-[350px] h-[350px] md:w-[700px] md:h-[520px]">
+            {/* soft glow background */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/25 to-blue-600/25 blur-2xl"></div>
+
+            {/* static ring */}
+            <div className="absolute inset-6 rounded-full border border-cyan-400/40"></div>
+
+            {/* --- Tech Nodes --- */}
+
+            {/* Top - Next.js */}
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 text-xs px-3 py-1 rounded-full bg-[#0b1220] border border-cyan-400/40 text-cyan-400">
+              Next.js
+            </span>
+
+            {/* Top Right - React (NEW) */}
+            <span className="absolute top-[15%] right-[15%] text-xs px-3 py-1 rounded-full bg-[#0b1220] border border-[#61dafb]/40 text-[#61dafb]">
+              React.js
+            </span>
+            <span className="absolute top-[15%] left-[15%] text-xs px-3 py-1 rounded-full bg-[#0b1220] border border-[#61dafb]/40 text-[#61dafb]">
+              Redux
+            </span>
+
+            {/* Right - Node.js */}
+            <span className="absolute right-0 top-1/2 -translate-y-1/2 text-xs px-3 py-1 rounded-full bg-[#0b1220] border border-green-400/40 text-green-400">
+              Node.js
+            </span>
+
+            {/* Bottom Right - Express (NEW) */}
+            <span className="absolute bottom-[15%] right-[15%] text-xs px-3 py-1 rounded-full bg-[#0b1220] border border-gray-400/40 text-gray-200">
+              Express.js
+            </span>
+            <span className="absolute bottom-[15%] left-[15%] text-xs px-3 py-1 rounded-full bg-[#0b1220] border border-gray-400/40 text-gray-200">
+              Mongoose
+            </span>
+
+            {/* Bottom - TypeScript */}
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-xs px-3 py-1 rounded-full bg-[#0b1220] border border-blue-400/40 text-blue-400">
+              TypeScript
+            </span>
+
+            {/* Left - MongoDB */}
+            <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xs px-3 py-1 rounded-full bg-[#0b1220] border border-emerald-400/40 text-emerald-400">
+              MongoDB
+            </span>
+
+            {/* profile image */}
+            <div className="relative z-10 w-[200px] h-[200px] md:w-[360px] md:h-[360px] rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-[3px]">
+              <img
+                src="https://i.ibb.co.com/BHr0k5mq/md-hasanujjaman.jpg"
+                alt="Hasanujjaman Hasan"
+                className="w-full h-full rounded-full object-cover bg-[#0b1220]"
+              />
+            </div>
+          </div>
         </div>
       </Container>
     </div>
