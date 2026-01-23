@@ -201,7 +201,7 @@ const Navbar = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="lg:hidden fixed right-0 top-20 bottom-0 w-80 bg-slate-900/95 backdrop-blur-2xl border-l border-cyan-500/20 shadow-2xl"
+              className="lg:hidden fixed right-0 top-20 bottom-0 w-80 bg-black/70 backdrop-blur-2xl border-l border-cyan-500/20 shadow-2xl"
             >
               {/* Decorative Gradient */}
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
